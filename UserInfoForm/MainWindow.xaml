@@ -1,0 +1,63 @@
+﻿<Window x:Class="UserInfoForm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UserInfoForm"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        Title="Fibonacci Series Generator" Height="665" Width="610">
+    <Grid Background="#FF111627">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="476*"/>
+            <RowDefinition Height="193*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <!-- Top section -->
+        <Label Content="User Information" Grid.Column="0" HorizontalAlignment="Left" Margin="32,32,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.048,0.541" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Some information you provide will be displayed publicly so be careful what you share." Grid.Column="0" HorizontalAlignment="Left" Margin="32,50,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.048,0.541" Foreground="White" FontSize="10" Grid.ColumnSpan="2" Width="506"/>
+       
+        <Border BorderBrush="LightGray" BorderThickness="2" Margin="36,84,36,0" Grid.ColumnSpan="2" Height="1" VerticalAlignment="Top"/>
+
+        <!-- Basic Information -->
+        <Label Content="Name" Grid.Column="0" HorizontalAlignment="Left" Margin="36,103,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.048,0.541" Foreground="White"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="0,107,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="180"  Grid.Column="1"/>
+
+        <Label Content="Email Address" Grid.Column="0" HorizontalAlignment="Left" Margin="36,140,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.048,0.541" Foreground="White"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="0,144,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="261"  Grid.Column="1"/>
+
+        <Label Content="Street Address" Grid.Column="0" HorizontalAlignment="Left" Margin="36,176,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.048,0.541" Foreground="White"/>
+        <TextBox x:Name="txtAddress" HorizontalAlignment="Left" TextWrapping="Wrap"  VerticalAlignment="Top" Width="288"  Grid.Column="1" Margin="0,180,0,0"/>
+
+        <Label Content="City" Grid.Column="0" HorizontalAlignment="Left" Margin="36,211,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.048,0.541" Foreground="White"/>
+        <TextBox x:Name="txtCity" HorizontalAlignment="Left" TextWrapping="Wrap"  VerticalAlignment="Top" Width="180"  Grid.Column="1" Margin="0,215,0,0"/>
+
+        <Label Content="Age" Grid.Column="0" HorizontalAlignment="Left" Margin="36,244,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.048,0.541" Foreground="White"/>
+        <TextBox x:Name="txtAge" HorizontalAlignment="Left" TextWrapping="Wrap"  VerticalAlignment="Top" Width="180"  Grid.Column="1" Margin="0,248,0,0"/>
+
+        <Border BorderBrush="LightGray" BorderThickness="2" Margin="36,290,36,0" Grid.ColumnSpan="2" Height="1" VerticalAlignment="Top"/>
+
+        <!-- Passwords -->
+        <Label Content="Password" Grid.Column="0" HorizontalAlignment="Left" Margin="36,310,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.048,0.541" Foreground="White"/>
+        <PasswordBox x:Name="password" Grid.Column="1" HorizontalAlignment="Left" Margin="0,314,0,0" VerticalAlignment="Top" Width="180"/>
+
+        <Label Content="Confirm Password" Grid.Column="0" HorizontalAlignment="Left" Margin="36,344,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.048,0.541" Foreground="White"/>
+        <PasswordBox x:Name="password2" Grid.Column="1" HorizontalAlignment="Left" Margin="0,348,0,0" VerticalAlignment="Top" Width="180"/>
+        <Border BorderBrush="LightGray" BorderThickness="2" Margin="36,387,36,0" Grid.ColumnSpan="2" Height="1" VerticalAlignment="Top"/>
+
+        <!-- Uploads -->
+        <Label Content="Resume" Grid.Column="0" HorizontalAlignment="Left" Margin="36,409,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.048,0.541" Foreground="White"/>
+        <Button Content="Upload file" Click="UploadFile" HorizontalAlignment="Left" Margin="0,409,0,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="White" Width="105" FontWeight="Bold" Height="25" Foreground="White" Grid.Column="1" FontSize="10"/>
+        <Label x:Name="fileName" Content="" HorizontalAlignment="Left" Margin="110,410,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.048,0.541" Foreground="White" FontSize="10" Width="195" Grid.Column="1" FontStyle="Italic"/>
+
+        <Label Content="Profile Image" Grid.Column="0" HorizontalAlignment="Left" Margin="35,451,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.048,0.541" Foreground="White" Grid.RowSpan="2"/>
+        <Button Content="Upload image" Click="UploadImage" HorizontalAlignment="Left" Margin="249,452,0,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="White" Width="106" FontWeight="Bold" Height="25" Foreground="White" FontSize="10" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Image x:Name="profileImg" HorizontalAlignment="Left" Height="106" Margin="119,452,0,0" VerticalAlignment="Top" Width="106" OpacityMask="White" Grid.Column="1" Grid.RowSpan="2"/>
+
+        <Button Content="Submit" HorizontalAlignment="Left" Margin="6,113,0,0" VerticalAlignment="Top" Height="34" Width="98" Background="#FF6366F1" FontWeight="Bold" Foreground="White" BorderBrush="{x:Null}" Cursor="Hand" Click="Submit" Grid.Row="1" Grid.Column="1"/>
+    </Grid>
+</Window>
